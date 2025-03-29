@@ -35,5 +35,4 @@ repos:
     rev: 7.1.2
     hooks:
       - id: flake8
-        # args: ["--config", "pyproject.toml"]
-        args: ["--max-line-length=79"]
+        additional_dependencies: [Flake8-pyproject]
