@@ -1,6 +1,5 @@
-from mlflow.nemo import find_run
+from mlflow.nemo.search import find_run
 
 
 def test_finds_run():
-    find_run()
-    pass
+    find_run("dummy run")
