@@ -1,5 +1,6 @@
-import mlflow
 from typing import List
+
+import mlflow
 
 
 def find_run(experiment_id: str, model_name: str) -> List[str]:
