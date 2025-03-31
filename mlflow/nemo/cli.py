@@ -1,5 +1,4 @@
 import click
-
 from mlflow.cli import cli
 
 
