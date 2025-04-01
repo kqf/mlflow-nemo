@@ -32,7 +32,11 @@ def find(name: str, experiment_id: Optional[str]):
         )
         raise click.Abort()
 
+    # TODO: Remove this command
     click.echo(f"Searching, {name}! Using Experiment ID: {experiment_id}")
+    found_runs = ["a", "b" "c"]
+    for run in found_runs:
+        click.echo(run)
 
 
 if __name__ == "__main__":
