@@ -4,6 +4,8 @@ from typing import Optional
 import click
 from mlflow.cli import cli
 
+from mlflow.nemo.search import find_run
+
 
 @cli.group("nemo", cls=click.Group)
 def nemo():
@@ -34,7 +36,7 @@ def find(name: str, experiment_id: Optional[str]):
 
     # TODO: Remove this command
     click.echo(f"Searching, {name}! Using Experiment ID: {experiment_id}")
-    found_runs = ["a", "b" "c"]
+    found_runs = find_run(run_name=name, experiment_id=experiment_id)
     for run in found_runs:
         click.echo(run)
 
