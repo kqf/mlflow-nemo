@@ -34,8 +34,6 @@ def find(name: str, experiment_id: Optional[str]):
         )
         raise click.Abort()
 
-    # TODO: Remove this command
-    click.echo(f"Searching, {name}! Using Experiment ID: {experiment_id}")
     found_runs = find_run(run_name=name, experiment_id=experiment_id)
     for run in found_runs:
         click.echo(run)
