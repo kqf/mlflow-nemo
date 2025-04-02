@@ -11,10 +11,11 @@ dependencies = [
 description = "An MLflow plugin providing the 'nemo' CLI command"
 
 [tool.setuptools]
-packages = { find = { include = ["mlflow.*"] } }  # ✅ Correct namespace discovery
+packages = { find = { include = ["mlflow.*"] } }
 
 [project.scripts]
-mlflow-nemo = "mlflow.nemo.cli:cli"
+# Very hacky, might not play well with other plugins
+mlflow = "mlflow.nemo.cli:cli"
 
 [tool.black]
 line-length = 79
