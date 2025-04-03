@@ -9,6 +9,7 @@ dependencies = [
     "mlflow"
 ]
 description = "An MLflow plugin providing the 'nemo' CLI command"
+readme = "README.rst"
 
 [tool.setuptools]
 packages = { find = { include = ["mlflow.*"] } }
