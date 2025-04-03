@@ -1,6 +1,14 @@
 mlflow-nemo
 ===========
 
+.. image:: https://github.com/kqf/mlflow-nemo/actions/workflows/tests.yml/badge.svg
+   :target: https://github.com/kqf/mlflow-nemo/actions
+   :alt: Tests
+
+.. image:: https://img.shields.io/pypi/dm/mlflow-nemo.svg
+   :target: https://pypi.org/project/mlflow-nemo/
+   :alt: PyPI Downloads
+
 An MLflow plugin providing the ``nemo`` CLI command.
 
 Installation
