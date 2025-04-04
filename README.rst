@@ -40,18 +40,10 @@ The ``find`` command helps locate MLflow runs based on their names.
 
 **Example:**
 
-Find a run named ``somerun`` in experiment ID ``123``:
+Find a run named ``some-run`` in experiment ID ``123`` and take the latest one:
 
 .. code-block:: bash
 
-    mlflow nemo find somerun --experiment-id 123
+    mlflow nemo find some-run --experiment-id 123 | head -n 1
 
 If no ``--experiment-id`` is provided, the command will check the environment variable ``MLFLOW_EXPERIMENT_ID``.
-
-**Error Handling:**
-
-If no experiment ID is provided, an error message is displayed:
-
-.. code-block:: bash
-
-    --experiment-id or MLFLOW_EXPERIMENT_ID is required.
