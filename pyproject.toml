@@ -1,22 +1,9 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools", "wheel", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
-
-[project]
-name = "mlflow-nemo"
-version = "0.0.1"
-dependencies = [
-    "mlflow"
-]
-description = "An MLflow plugin providing the 'nemo' CLI command"
-readme = "README.rst"
 
 [tool.setuptools]
 packages = { find = { include = ["mlflow.*"] } }
-
-[project.scripts]
-# Very hacky, might not play well with other plugins
-mlflow = "mlflow.nemo.cli:cli"
 
 [tool.black]
 line-length = 79
@@ -39,3 +26,17 @@ ignore = [
 
 [tool.pytest.ini_options]
 addopts = "--cov=mlflow.nemo --cov-report=term-missing"
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+
+[project]
+name = "mlflow-nemo"
+dynamic = ["version"]
+dependencies = ["mlflow"]
+description = "An MLflow plugin providing the 'nemo' CLI command"
+readme = "README.rst"
+
+[project.scripts]
+# Very hacky, might not play well with other plugins
+mlflow = "mlflow.nemo.cli:cli"
